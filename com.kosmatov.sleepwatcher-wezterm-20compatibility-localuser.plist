@@ -3,13 +3,12 @@
 <plist version="1.0">
 <dict>
 	<key>Label</key>
-	<string>com.nilswinkler.sleepwatcher-lync-status</string>
+	<string>com.kosmatov.sleepwatcher-wezterm</string>
 	<key>ProgramArguments</key>
 	<array>
 		<string>/usr/local/sbin/sleepwatcher</string>
 		<string>-V</string>
-		<string>-D ~/.sleepwatcher-dim</string>
-		<string>-W ~/.sleepwatcher-wakeup</string>
+    <string>-D ~/sleepwatcher-wezterm/bg-change</string>
 	</array>
 	<key>RunAtLoad</key>
 	<true/>

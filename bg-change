@@ -1,0 +1,3 @@
+#!/bin/bash
+
+ls ~/sleepwatcher-wezterm/images/ | sort -R | head -1 | { while read str; do sed -i .bkp -E "s:[^/]+.jpg:${str}:" .wezterm.lua; done }

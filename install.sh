@@ -2,17 +2,14 @@
 
 SCRIPT_DIR=$(cd $(dirname $0}); pwd)
 
-PLIST_FILE=~/Library/LaunchAgents/com.nilswinkler.sleepwatcher-lync-status-20compatibility-localuser.plist
+PLIST_FILE=~/Library/LaunchAgents/com.kosmatov.sleepwatcher-wezterm-20compatibility-localuser.plist
 
 if [ -f $PLIST_FILE ]; then
   launchctl unload $PLIST_FILE
 fi
 
-launchctl remove "com.nilswinkler.sleepwatcher-lync-status"
+launchctl remove "com.kosmatov.sleepwatcher-wezterm"
 
-ln -sfv $SCRIPT_DIR/com.nilswinkler.sleepwatcher-lync-status-20compatibility-localuser.plist ~/Library/LaunchAgents/
-
-ln -s $SCRIPT_DIR/lync-store-away.sh ~/.sleepwatcher-dim
-ln -s $SCRIPT_DIR/lync-restore-status.sh ~/.sleepwatcher-wakeup
+ln -sfv $SCRIPT_DIR/com.kosmatov.sleepwatcher-wezterm-20compatibility-localuser.plist ~/Library/LaunchAgents/
 
 launchctl load $PLIST_FILE

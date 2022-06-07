@@ -1,6 +1,6 @@
 #!/bin/bash
 
-PLIST_FILE=~/Library/LaunchAgents/com.nilswinkler.sleepwatcher-lync-status-20compatibility-localuser.plist
+PLIST_FILE=~/Library/LaunchAgents/com.kosmatov.sleepwatcher-wezterm-20compatibility-localuser.plist
 
 if [ -f $PLIST_FILE ]; then
   launchctl unload $PLIST_FILE
@@ -8,7 +8,4 @@ if [ -f $PLIST_FILE ]; then
   rm $PLIST_FILE
 fi
 
-launchctl remove "com.nilswinkler.sleepwatcher-lync-status"
-
-rm -f ~/.sleepwatcher-dim
-rm -f ~/.sleepwatcher-wakeup
+launchctl remove "com.kosmatov.sleepwatcher-wezterm"
