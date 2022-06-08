@@ -35,8 +35,6 @@ cp ~/Pictures/Wallpapers/* images/
 
 Or download wallpapers directly to images/ directory from https://www.uhdpaper.com/ for example
 
-If you lock your screen now (for the first time after installing this tool), it will not work. After unlocking your screen, you will see a notification indicating that the `sleepwatcher` application wants to change your _assistive settings_. Open your Mac's _System Preferences_ and check the box in the _Security & Privacy > Accessability_ screen next to _sleepwatcher_. This is required to allow SleepWatcher to use the system's menu to change the Lync status:
-
 ### Uninstalling
 
 To remove the sleepwatcher integration, simply call the provided uninstall script:
@@ -47,6 +45,3 @@ cd sleepwatcher-wezterm
 ./uninstall.sh
 ```
 
-## Known Issues
-
-* The menu integration can fail on installations of OS X that don't use English language. There are some hardcoded values in the code referencing the menu entries.
