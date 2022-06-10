@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>WorkingDirectory</key>
+    <string>__workdir__</string>
+    <key>Label</key>
+    <string>com.kosmatov.sleepwatcher-wezterm</string>
+    <key>ProgramArguments</key>
+    <array>
+      <string>/usr/local/opt/sleepwatcher/sbin/sleepwatcher</string>
+      <string>-V</string>
+      <string>-D make change</string>
+    </array>
+    <key>StandardOutPath</key>
+    <string>__workdir__/sleepwatcher.log</string>
+    <key>StandardErrorPath</key>
+    <string>__workdir__/sleepwatcher.log</string>
+    <key>RunAtLoad</key>
+    <true/>
+    <key>KeepAlive</key>
+    <true/>
+  </dict>
+</plist>                                                                                                 [2.90s]

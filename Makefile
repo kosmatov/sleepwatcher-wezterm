@@ -9,7 +9,7 @@ change:
 
 install: unload-service remove-service
 	@brew list sleepwatcher > /dev/null 2>&1 || brew install sleepwatcher
-	ln -sfv $(shell pwd)/$(shell basename $(PLIST_FILE)) ~/Library/LaunchAgents/
+	@sed s:__workdir__:$(shell pwd): com.kosmatov.sleepwatcher-wezterm.plist > $(PLIST_FILE)
 	launchctl load $(PLIST_FILE)
 
 unload-service:
