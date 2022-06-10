@@ -11,13 +11,7 @@ cd sleepwatcher-wezterm
 make install
 ```
 
-Then add images to images/source/ directory, run something like this:
-
-```bash
-cp ~/Pictures/Wallpapers/* images/source/
-```
-
-Or download wallpapers directly to `images/source/` directory from [uhdpaper.com](https://www.uhdpaper.com) for example
+Add 4k images to `images/source/` directory, may download from [uhdpaper.com](https://www.uhdpaper.com)
 
 Then generate backgrounds:
 
