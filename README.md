@@ -17,7 +17,7 @@ Then add images to images/source/ directory, run something like this:
 cp ~/Pictures/Wallpapers/* images/source/
 ```
 
-Or download wallpapers directly to `images/source/` directory from (uhdpaper.com)[https://www.uhdpaper.com] for example
+Or download wallpapers directly to `images/source/` directory from [uhdpaper.com](https://www.uhdpaper.com) for example
 
 Then generate backgrounds:
 
