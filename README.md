@@ -1,7 +1,7 @@
 sleepwatcher-wezterm
 =====================
 
-Automatically changes wezterm background image when the screen is locked or unlocked on Mac OS X
+Automatically changes wezterm background image when the screen is locked on Mac OS X
 
 ## Installation
 
