@@ -12,6 +12,10 @@
       <string>-V</string>
       <string>-D make change</string>
     </array>
+    <key>StandardOutPath</key>
+    <string>__workdir__/sleepwatcher.log</string>
+    <key>StandardErrorPath</key>
+    <string>__workdir__/sleepwatcher.log</string>
     <key>RunAtLoad</key>
     <true/>
     <key>KeepAlive</key>
