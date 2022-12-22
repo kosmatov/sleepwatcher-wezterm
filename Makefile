@@ -1,8 +1,9 @@
 PLIST_FILE := ~/Library/LaunchAgents/com.kosmatov.sleepwatcher-wezterm-20compatibility-localuser.plist
 SERVICE := com.kosmatov.sleepwatcher-wezterm
+BG_SRC_PATH ?= source
 
 backgrounds: install-imagemagick
-	ls images/source | grep -v mask.png | { while read str; do magick composite images/source/mask.png "images/source/$${str}" "images/$$(echo "$${str}" | sed -E 's:(-uhd.+)?\.(jpg|jpeg|png|gif):.png:i')"; done }
+	ls images/$(BG_SRC_PATH) | grep -v mask.png | { while read str; do magick composite images/source/mask.png "images/$(BG_SRC_PATH)/$${str}" "images/$$(echo "$${str}" | sed -E 's:(-uhd.+)?\.(jpg|jpeg|png|gif):.png:i')"; done }
 
 change:
 	ls images/ | grep png | sort -R | head -1 | { while read str; do sed -i '~' -E "s:[^/]+.png:$${str}:" ~/.wezterm.lua; done }
