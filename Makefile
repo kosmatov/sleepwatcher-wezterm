@@ -1,12 +1,11 @@
 PLIST_FILE := ~/Library/LaunchAgents/com.kosmatov.sleepwatcher-wezterm-20compatibility-localuser.plist
 SERVICE := com.kosmatov.sleepwatcher-wezterm
-BG_SRC_PATH ?= source
 
-backgrounds: install-imagemagick
-	ls images/$(BG_SRC_PATH) | grep -v mask.png | { while read str; do magick composite images/source/mask.png "images/$(BG_SRC_PATH)/$${str}" "images/$$(echo "$${str}" | sed -E 's:(-uhd.+)?\.(jpg|jpeg|png|gif):.png:i')"; done }
+backgrounds:
+	cp "/Library/Desktop Pictures/*.jpg" images/
 
 change:
-	ls images/ | grep png | sort -R | head -1 | { while read str; do sed -i '~' -E "s:[^/]+.png:$${str}:" ~/.wezterm.lua; done }
+	ls images/ | grep -E "(png|jpg|jpeg|gif)" | grep -v mask.png | sort -R | head -1 | { while read str; do sed -i '~' -E "1,/repeat_x/s:[^/]+.(png|jpg|jpeg|gif):$${str}:" ~/.wezterm.lua; done }
 
 install: unload-service remove-service
 	@brew list sleepwatcher > /dev/null 2>&1 || brew install sleepwatcher
@@ -21,6 +20,3 @@ remove-service:
 
 uninstall: unload-service remove-service
 	rm $(PLIST_FILE)
-
-install-imagemagick:
-	@which magick > /dev/null 2>&1 || brew install imagemagick

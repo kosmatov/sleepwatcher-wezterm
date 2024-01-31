@@ -8,7 +8,7 @@
     <string>com.kosmatov.sleepwatcher-wezterm</string>
     <key>ProgramArguments</key>
     <array>
-      <string>/usr/local/opt/sleepwatcher/sbin/sleepwatcher</string>
+      <string>/opt/homebrew/opt/sleepwatcher/sbin/sleepwatcher</string>
       <string>-V</string>
       <string>-D make change</string>
     </array>
