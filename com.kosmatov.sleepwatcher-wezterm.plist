@@ -10,7 +10,8 @@
     <array>
       <string>/opt/homebrew/opt/sleepwatcher/sbin/sleepwatcher</string>
       <string>-V</string>
-      <string>-D make change</string>
+      <string>-t 6000</string>
+      <string>-i make change</string>
     </array>
     <key>StandardOutPath</key>
     <string>__workdir__/sleepwatcher.log</string>
