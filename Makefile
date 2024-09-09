@@ -1,4 +1,4 @@
-PLIST_FILE := ~/Library/LaunchAgents/com.kosmatov.sleepwatcher-wezterm-20compatibility-localuser.plist
+PLIST_FILE := /Library/LaunchAgents/com.kosmatov.sleepwatcher-wezterm-20compatibility-localuser.plist
 SERVICE := com.kosmatov.sleepwatcher-wezterm
 
 backgrounds:
@@ -9,7 +9,7 @@ change:
 
 install: unload-service remove-service
 	@brew list sleepwatcher > /dev/null 2>&1 || brew install sleepwatcher
-	@sed s:__workdir__:$(shell pwd): com.kosmatov.sleepwatcher-wezterm.plist > $(PLIST_FILE)
+	@sed s:__workdir__:$(shell pwd): com.kosmatov.sleepwatcher-wezterm.plist | sudo tee $(PLIST_FILE)
 	launchctl load $(PLIST_FILE)
 
 unload-service:
